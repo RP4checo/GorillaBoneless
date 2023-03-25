@@ -6,7 +6,7 @@
 }
 
 .ff-secondary {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Impact', cursive;
 }
 
 .fw-medium {
@@ -23,6 +23,16 @@
     right: 45px;
     bottom: 45px;
     z-index: 99;
+}
+
+.logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('img/gorillaBoneless.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 50px;
 }
 
 
@@ -43,7 +53,7 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Impact', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     transition: .5s;
