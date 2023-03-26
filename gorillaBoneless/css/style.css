@@ -330,6 +330,10 @@
     }
 }
 
+.maps {
+    width: 550px;
+}
+
 #videoModal {
     z-index: 99999;
 }
