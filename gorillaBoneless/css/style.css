@@ -491,3 +491,12 @@
     padding-right: 0;
     border-right: none;
 }
+
+h1{
+    letter-spacing: .25rem;
+}
+
+h1#logo {
+    -webkit-text-stroke: .0005cm rgb(180, 180, 180);
+}
+
