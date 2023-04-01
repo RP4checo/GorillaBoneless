@@ -122,6 +122,52 @@
     max-height: 45px;
 }
 
+.login {
+    background-color: #ff0100;
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .login h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .login button {
+    background-color: #fff;
+    color: #ff0100;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login button:hover {
+    background-color: #ff0100;
+    color: #fff;
+  }  
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
         position: relative;
@@ -331,7 +377,7 @@
 }
 
 .maps {
-    width: 550px;    
+    width: 550px;
 }
 
 #videoModal {
@@ -492,7 +538,7 @@
     border-right: none;
 }
 
-h1{
+h1 {
     letter-spacing: .25rem;
 }
 
@@ -500,8 +546,7 @@ h1#logo {
     -webkit-text-stroke: .0005cm rgb(180, 180, 180);
 }
 
-img#logo-footer{
+img#logo-footer {
     width: 170px;
     height: 200px;
 }
-
