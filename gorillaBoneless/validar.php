@@ -18,9 +18,7 @@ if($filas){
     header("location:carrito.html");
 
 }else{
-    ?>
-    <?php
-    include("login.html");
+    header("location:login.html?error=1");
 
 }
 mysqli_free_result($resultado);
