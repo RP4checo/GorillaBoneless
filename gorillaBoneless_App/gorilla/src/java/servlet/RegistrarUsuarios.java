@@ -12,6 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "RegistrarUsuarios", urlPatterns = {"/nuevousuario"})
 public class RegistrarUsuarios extends HttpServlet {
+    
+      private Conexion conexion;
+
+    public RegistrarUsuarios(Conexion conexion) {
+        this.conexion = conexion;
+    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,7 +39,7 @@ public class RegistrarUsuarios extends HttpServlet {
         if(sql.registrar(usuario, clave)){
             response.sendRedirect("index.jsp");
         }else {
-            response.sendRedirect("registro.jsp");
+            response.sendRedirect("register.jsp");
         }
     }
 

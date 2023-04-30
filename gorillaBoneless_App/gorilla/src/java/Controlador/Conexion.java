@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-    
+
     private String USERNAME = "root";
     private String PASSWORD = "";
     private String HOST = "localhost";
@@ -14,20 +14,21 @@ public class Conexion {
     private String CLASSNAME = "com.mysql.jdbc.Driver";
     private String URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE;
     private Connection con;
-    
-    public Conexion(){
+
+    public Conexion() {
         try {
             Class.forName(CLASSNAME);
-            con = DriverManager.getConnection(URL,USERNAME,PASSWORD);
-        }catch(ClassNotFoundException e){
+            con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            System.out.println("Conexión establecida correctamente"); // Agregar este mensaje
+        } catch (ClassNotFoundException e) {
             System.err.println("Error en: " + e);
-        }catch(SQLException e){
+        } catch (SQLException e) {
             System.err.println("Error en: " + e);
         }
     }
-    
-    public Connection getConexion(){
+
+    public Connection getConexion() {
         return con;
     }
-    
+
 }
