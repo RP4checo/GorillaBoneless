@@ -74,7 +74,7 @@
                             <a href="menu.html" class="nav-item nav-link">Menú</a>
                             <a href="contact.html" class="nav-item nav-link">Contáctanos</a>
                         </div>
-                        <a href="login.html" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
+                        <a href="login.jsp" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
                     </div>
                 </nav>
 
@@ -163,7 +163,7 @@
                     }
                 %>
                 </form>
-                <div class="text-red">¿Ya tiene una cuenta? <a class="text-red" href="login.html">Iniciar Sesión</a></div>                 
+                <div class="text-red">¿Ya tiene una cuenta? <a class="text-red" href="login.jsp">Iniciar Sesión</a></div>                 
             </div>
 
 

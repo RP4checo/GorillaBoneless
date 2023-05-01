@@ -1,3 +1,11 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="Controlador.Conexion"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.Connection"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="javax.sql.*" %>
+<%@ page import="javax.naming.*" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,23 +92,69 @@
 
 
         <div class="signup-form">
-            <form action="validar.php" method="POST">
-                <h2>Inicia Sesión</h2>                
-                <div class="form-group">
-                    <input type="email" class="form-control" name="correo" placeholder="Correo" required="required">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
-                </div>
-                <div class="form-group">
-                    <label class="form-check-label"><input type="checkbox"> Recuérdame</label>
-                </div>
-                <div class="form-group">
-                    <a href="crud.html"><button type="button" class="btn btn-success btn-lg btn-block">Iniciar Sesión</button></a>
-                </div>
-            </form>
-            <div class="text-red">¿Aún no tienes cuenta? <a class="text-red" href="register.jsp"> Registrarse</a></div>
+    <form action="login.jsp" method="POST">
+        <h2>Inicia Sesión</h2>                
+        <div class="form-group">
+            <input type="email" class="form-control" name="correo" placeholder="Correo" required="required">
         </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
+        </div>
+        <div class="form-group">
+            <label class="form-check-label"><input type="checkbox"> Recuérdame</label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block" name="login">Iniciar Sesión</button>
+        </div>
+    </form>
+    <div class="text-red">¿Aún no tienes cuenta? <a class="text-red" href="register.jsp">Registrarse</a></div>
+</div>
+<%
+if (request.getMethod().equalsIgnoreCase("POST")) {
+// Obtener los parámetros del formulario
+String correo = request.getParameter("correo");
+String password = request.getParameter("password");
+
+// Validar el inicio de sesión
+Conexion conexion = new Conexion();
+Connection connection = conexion.getConexion();
+PreparedStatement statement = null;
+ResultSet resultset = null;
+String sql = "SELECT * FROM cliente WHERE correo = ? AND password = ?";
+try {
+    statement = connection.prepareStatement(sql);
+    statement.setString(1, correo);
+    statement.setString(2, password);
+
+    resultset = statement.executeQuery();
+
+    // Si el inicio de sesión es correcto, redireccionar a la página de "crud.html"
+    if (resultset.next()) {
+        response.sendRedirect("crud.html");
+    } else {
+        // Si el inicio de sesión es incorrecto, redireccionar a la página de "register.jsp"
+        response.sendRedirect("register.jsp");
+    }
+} catch (SQLException e) {
+    e.printStackTrace();
+} finally {
+    // Cerrar la conexión y liberar recursos
+    try {
+        if (resultset != null) {
+            resultset.close();
+        }
+        if (statement != null) {
+            statement.close();
+        }
+        if (connection != null) {
+            connection.close();
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+}
+%>
 
 
         <!-- Footer Start -->
