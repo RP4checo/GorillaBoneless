@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +67,7 @@
                             settings
                             </span></a>
                     </div>
-                    <a href="login.html" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
+                    <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                 </div>
             </nav>
 

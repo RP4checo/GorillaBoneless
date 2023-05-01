@@ -59,11 +59,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0 pe-4">
-                            <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                            <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                            <a href="service.html" class="nav-item nav-link">Servicios</a>
-                            <a href="menu.html" class="nav-item nav-link">Menú</a>
-                            <a href="contact.html" class="nav-item nav-link">Contáctanos</a>
+                            <a href="index.jsp" class="nav-item nav-link active">Inicio</a>
+                            <a href="about.jsp" class="nav-item nav-link">Nosotros</a>
+                            <a href="service.jsp" class="nav-item nav-link">Servicios</a>
+                            <a href="menu.jsp" class="nav-item nav-link">Menú</a>
+                            <a href="contact.jsp" class="nav-item nav-link">Contáctanos</a>
                         </div>
                         <a href="login.jsp" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
                     </div>
@@ -688,8 +688,8 @@
                     <div class="row g-5">
                         <div class="col-lg-3 col-md-6">
                             <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
-                            <a class="btn btn-link" href="about.html">Nosotros</a>
-                            <a class="btn btn-link" href="contact.html">Contáctanos</a>
+                            <a class="btn btn-link" href="about.jsp">Nosotros</a>
+                            <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contáctanos</h4>
@@ -722,8 +722,8 @@
                             </div>
                             <div class="col-md-6 text-center text-md-end">
                                 <div class="footer-menu">
-                                    <a href="index.html">Inicio</a>
-                                    <a href="contact.html">Ayuda</a>
+                                    <a href="index.jsp">Inicio</a>
+                                    <a href="contact.jsp">Ayuda</a>
                                 </div>
                             </div>
                         </div>

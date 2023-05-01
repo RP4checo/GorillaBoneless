@@ -1,9 +1,11 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Gorillaz Boneless | Contáctanos</title>
+    <title>Gorillaz Boneless | Servicios</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -58,23 +60,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="menu.html" class="nav-item nav-link">Menú</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contáctanos</a>
+                        <a href="index.jsp" class="nav-item nav-link">Inicio</a>
+                        <a href="about.jsp" class="nav-item nav-link">Nosotros</a>
+                        <a href="service.jsp" class="nav-item nav-link active">Servicios</a>
+                        <a href="menu.jsp" class="nav-item nav-link">Menú</a>
+                        <a href="contact.jsp" class="nav-item nav-link">Contáctanos</a>
                     </div>
-                  <a href="login.jsp" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
+                    <a href="login.jsp" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
                 </div>
             </nav>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contáctanos</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Servicios</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contáctanos</li>
+                            <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Servicios</li>
                         </ol>
                     </nav>
                 </div>
@@ -83,72 +85,50 @@
         <!-- Navbar & Hero End -->
 
 
-        <!-- Contact Start -->
+        <!-- Service Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contáctanos</h5>
-                    <h1 class="mb-5">Contáctanos por cualquier consulta</h1>
-                </div>
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="row gy-4">
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Pedidos</h5>
-                                <p><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210 </p>
-                            </div>
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>jorgvillagrana@hotmail.com </p>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                                <h5>Cocineros de calidad</h5>
+                                <p>Chefs con +10 años de experiencia</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                        <a href="https://goo.gl/maps/ZRebmxkpDn6ZGvc26" target="_blank">
-                            <img src="img/maps.png" class="maps">
-                        </a>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <h5>Comida de Calidad</h5>
+                                <p>Alimentos frescos y bien preparados</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Tu Nombre</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email"
-                                                placeholder="Your Email">
-                                            <label for="email">Tu Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                            <label for="subject">Tema</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here"
-                                                id="message" style="height: 150px"></textarea>
-                                            <label for="message">Mensaje</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
-                                    </div>
-                                </div>
-                            </form>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
+                                <h5>Ordena Online</h5>
+                                <p>Servicio de pedidos por internet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                                <h5>Excelente Atención al Cliente</h5>
+                                <p>Trato amable y servicial al cliente</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+        <!-- Service End -->
 
 
         <!-- Footer Start -->
@@ -157,8 +137,8 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
-                        <a class="btn btn-link" href="about.html">Nosotros</a>
-                        <a class="btn btn-link" href="contact.html">Contáctanos</a>
+                        <a class="btn btn-link" href="about.jsp">Nosotros</a>
+                        <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contáctanos</h4>
@@ -167,13 +147,9 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>jorgvillagrana@hotmail.com </p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social"
-                                href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social"
-                                href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                        </div>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                             </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Horarios</h4>
@@ -181,24 +157,22 @@
                         <p>10AM - 09PM</p>
                         <h5 class="text-light fw-normal">Domingo</h5>
                         <p>10AM - 05PM</p>
-                    </div>
+                    </div>     
                     <div class="col-lg-3 col-md-6">
                         <h4><img id="logo-footer" src="img/gorillaBoneless.png" alt="lgo"></h4>
-                    </div> 
+                    </div>                
                 </div>
             </div>
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom"
-                                href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz
-                                Boneless</a>, Todos los derechos reservados.
+                            &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Inicio</a>
-                                <a href="contact.html">Ayuda</a>
+                                <a href="index.jsp">Inicio</a>
+                                <a href="contact.jsp">Ayuda</a>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,7 @@
+<%@page import="Controlador.ControladorProducto"%>
+<%@page import="Modelo.Producto"%>
+<%@page import="Modelo.Articulo"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,13 +69,13 @@
                             settings
                             </span>
                         </a>
-                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                             shopping_cart
                             </span>
                         </a>
 
                     </div>
-                    <a href="login.html" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
+                    <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                 </div>
             </nav>
 
@@ -141,7 +145,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -163,7 +167,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -184,7 +188,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -205,7 +209,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -226,7 +230,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -247,7 +251,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -268,7 +272,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -289,7 +293,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -310,7 +314,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -331,7 +335,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -358,7 +362,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -380,7 +384,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -401,7 +405,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -422,7 +426,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -443,7 +447,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -464,7 +468,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -485,7 +489,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -506,7 +510,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -527,7 +531,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -548,7 +552,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -575,7 +579,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -597,7 +601,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -618,7 +622,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -639,7 +643,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -660,7 +664,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -681,7 +685,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -702,7 +706,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -723,7 +727,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -744,7 +748,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -765,7 +769,7 @@
                                         </small>
                                     </div>
                                     <div class="w-1000 d-flex flex-column text-start ps-4">
-                                        <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                        <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                         add_shopping_cart
                                         </span>
                                     </a>
@@ -876,7 +880,7 @@
                         </div>
                         <div id="" class="nav-item nav-link">
                             <div>
-                                <a id="comprar-te" href="carrito.html" >
+                                <a id="comprar-te" href="carrito.jsp" >
                                     <i class="fa fa-shopping-cart"> Comprar</i>
                                 </a>
                             </div>
