@@ -12,11 +12,7 @@ public class Conexion {
     private String PORT = "3306";
     private String DATABASE = "gorillaboneless";
     private String CLASSNAME = "com.mysql.jdbc.Driver";
-    private String URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE
-            + "useSSL=false&"
-            + "useTimezone=true&"
-            + "serverTimezone=UTC&"
-            + "allowPublicKeyRetrieval=true";
+    private String URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE;
     private Connection con;
 
     public Conexion() {
