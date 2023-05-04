@@ -64,4 +64,54 @@ public class ControladorProducto {
         }        
         return htmlcode;        
     }
+    
+    public String getProductosBebidas(){
+        ModeloProducto mp = new ModeloProducto();
+        String htmlcode = "";
+        for(Producto producto : mp.getAllProductosBebidas()){
+            htmlcode += "<div class=\"col-sm-4\">\n" +
+"							<div class=\"product-image-wrapper\">\n" +
+"								<div class=\"single-products\">\n" +
+"									<div class=\"productinfo text-center\">\n" +
+"										<img class=\"img-fluid\" height=\"250\" width=\"250\" src=\""+producto.getImg()+"\" alt=\"\" />\n" +
+"										<h2>$"+producto.getPrecio()+"</h2>\n" +
+"										<p>"+producto.getNombre()+"</p>\n" +
+"										<a href=\"product-details.jsp?id="+producto.getId()+"\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n " +
+"									</div>\n" +
+"									<div class=\"product-overlay\">\n" +
+"										<div class=\"overlay-content\">\n" +    
+"										</div>\n" +
+"									</div>\n" +
+"								</div>\n" +
+
+"							</div>\n" +
+"						</div>";
+        }        
+        return htmlcode;        
+    }
+    
+    public String getProductosPostres(){
+        ModeloProducto mp = new ModeloProducto();
+        String htmlcode = "";
+        for(Producto producto : mp.getAllProductosPostres()){
+            htmlcode += "<div class=\"col-sm-4\">\n" +
+"							<div class=\"product-image-wrapper\">\n" +
+"								<div class=\"single-products\">\n" +
+"									<div class=\"productinfo text-center\">\n" +
+"										<img class=\"img-fluid\" height=\"250\" width=\"250\" src=\""+producto.getImg()+"\" alt=\"\" />\n" +
+"										<h2>$"+producto.getPrecio()+"</h2>\n" +
+"										<p>"+producto.getNombre()+"</p>\n" +
+"										<a href=\"product-details.jsp?id="+producto.getId()+"\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n " +
+"									</div>\n" +
+"									<div class=\"product-overlay\">\n" +
+"										<div class=\"overlay-content\">\n" +    
+"										</div>\n" +
+"									</div>\n" +
+"								</div>\n" +
+
+"							</div>\n" +
+"						</div>";
+        }        
+        return htmlcode;        
+    }
 }

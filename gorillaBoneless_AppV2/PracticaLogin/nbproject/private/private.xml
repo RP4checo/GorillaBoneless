@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/src/java/servlet/InicioSesion1.java</file>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/web/carrito.jsp</file>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/src/java/Modelo/Articulo.java</file>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/src/java/Controlador/ControladorProducto.java</file>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/src/java/servlet/ControladorProducto.java</file>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/src/java/Modelo/ModeloProducto.java</file>
-            <file>file:/D:/pc%20blanco/Downloads/PracticaLogin/PracticaLogin/web/carrito.html</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/src/java/Controlador/ControladorProducto.java</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/web/menu.html</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/web/menu.jsp</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/web/product-details.jsp</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/src/java/Modelo/ModeloProducto.java</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/web/carrito.jsp</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/src/java/Controlador/Consultas.java</file>
+            <file>file:/C:/Users/EDW/Documents/GitHub/GorillaBoneless/gorillaBoneless_AppV2/PracticaLogin/src/java/Controlador/Conexion.java</file>
         </group>
     </open-files>
 </project-private>

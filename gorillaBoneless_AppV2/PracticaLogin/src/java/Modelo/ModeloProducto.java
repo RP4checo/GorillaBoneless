@@ -107,4 +107,68 @@ public class ModeloProducto extends Conexion{
         System.out.println(productos);
         return productos;
     }
+    
+    public ArrayList<Producto> getAllProductosBebidas(){
+        ArrayList<Producto> productos=new ArrayList<>();
+        PreparedStatement pst=null;
+        ResultSet rs=null;
+        try{
+            String sql="SELECT * FROM productos WHERE categoria=0";
+            pst=getConexion().prepareCall(sql);
+            rs=pst.executeQuery();
+            while(rs.next()){
+                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio")));
+            }
+        }catch(Exception e){
+        }finally{
+            try{
+                if(rs!=null){
+                    rs.close();
+                }
+                if(pst!=null){
+                    pst.close();
+                }
+                if(getConexion()!=null){
+                    getConexion().close();
+                }
+            }
+            catch(Exception e){
+                
+            }
+        }
+        System.out.println(productos);
+        return productos;
+    }
+    
+    public ArrayList<Producto> getAllProductosPostres(){
+        ArrayList<Producto> productos=new ArrayList<>();
+        PreparedStatement pst=null;
+        ResultSet rs=null;
+        try{
+            String sql="SELECT * FROM productos WHERE categoria=2";
+            pst=getConexion().prepareCall(sql);
+            rs=pst.executeQuery();
+            while(rs.next()){
+                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio")));
+            }
+        }catch(Exception e){
+        }finally{
+            try{
+                if(rs!=null){
+                    rs.close();
+                }
+                if(pst!=null){
+                    pst.close();
+                }
+                if(getConexion()!=null){
+                    getConexion().close();
+                }
+            }
+            catch(Exception e){
+                
+            }
+        }
+        System.out.println(productos);
+        return productos;
+    }
 }
