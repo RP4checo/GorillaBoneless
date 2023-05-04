@@ -21,7 +21,7 @@ public class ModeloProducto extends Conexion{
             pst=getConexion().prepareCall(sql);
             rs=pst.executeQuery();
             while(rs.next()){
-                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio")));
+                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio"), rs.getInt("categoria")));
             }
         }catch(Exception e){
         }finally{
@@ -54,7 +54,7 @@ public class ModeloProducto extends Conexion{
             pst.setInt(1, id);
             rs=pst.executeQuery();
             while(rs.next()){
-                producto=new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio"));
+                producto=new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio"), rs.getInt("categoria"));
             }
         }catch(Exception e){
             
@@ -85,7 +85,7 @@ public class ModeloProducto extends Conexion{
             pst=getConexion().prepareCall(sql);
             rs=pst.executeQuery();
             while(rs.next()){
-                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio")));
+                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio"), rs.getInt("categoria")));
             }
         }catch(Exception e){
         }finally{
@@ -117,7 +117,7 @@ public class ModeloProducto extends Conexion{
             pst=getConexion().prepareCall(sql);
             rs=pst.executeQuery();
             while(rs.next()){
-                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio")));
+                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio"), rs.getInt("categoria")));
             }
         }catch(Exception e){
         }finally{
@@ -149,7 +149,7 @@ public class ModeloProducto extends Conexion{
             pst=getConexion().prepareCall(sql);
             rs=pst.executeQuery();
             while(rs.next()){
-                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio")));
+                productos.add(new Producto(rs.getInt("id_producto"),rs.getString("nombre"),rs.getString("img_producto"),rs.getDouble("precio"), rs.getInt("categoria")));
             }
         }catch(Exception e){
         }finally{

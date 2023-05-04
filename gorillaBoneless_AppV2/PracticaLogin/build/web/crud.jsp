@@ -5,6 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Controlador.ControladorProducto" %>
+<%
+    ControladorProducto cp = new ControladorProducto();
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,61 +109,14 @@
                             <tr>
                                 <th>Código</th>
                                 <th>Nombre</th>
-                                <th>Descripción</th>
+                                <th>Imagen</th>
                                 <th>Precio</th>
                                 <th>Categoria</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>001</td>
-                                <td>Boneless 250g</td>
-                                <td>250g de boneless bbq ...</td>
-                                <td>Alimentos</td>
-                                <td>$150.00</td>
-                                <td>
-                                    <a class="add" title="Guardar" data-toggle="tooltip"><i class="material-icons"><span
-                                                class="material-symbols-outlined">save</span></i></a>
-                                    <a class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons"><span
-                                                class="material-symbols-outlined">edit</span></i></a>
-                                    <a class="delete" title="Eliminar" data-toggle="tooltip"><i
-                                            class="material-icons"><span
-                                                class="material-symbols-outlined">delete</span></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>002</td>
-                                <td>Hamburguesa Doble Carne</td>
-                                <td>Hamburguesa doble carne ...</td>
-                                <td>Alimentos</td>
-                                <td>$179.00</td>
-                                <td>
-                                    <a class="add" title="Guardar" data-toggle="tooltip"><i class="material-icons"><span
-                                                class="material-symbols-outlined">save</span></i></a>
-                                    <a class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons"><span
-                                                class="material-symbols-outlined">edit</span></i></a>
-                                    <a class="delete" title="Eliminar" data-toggle="tooltip"><i
-                                            class="material-icons"><span
-                                                class="material-symbols-outlined">delete</span></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>003</td>
-                                <td>Coca-cola 600ml</td>
-                                <td>Refresco coca cola de ...</td>
-                                <td>Bebidas</td>
-                                <td>$25.00</td>
-                                <td>
-                                    <a class="add" title="Guardar" data-toggle="tooltip"><i class="material-icons"><span
-                                                class="material-symbols-outlined">save</span></i></a>
-                                    <a class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons"><span
-                                                class="material-symbols-outlined">edit</span></i></a>
-                                    <a class="delete" title="Eliminar" data-toggle="tooltip"><i
-                                            class="material-icons"><span
-                                                class="material-symbols-outlined">delete</span></i></a>
-                                </td>
-                            </tr>
+                            <%=cp.getProductosTabla()%>
                         </tbody>
                     </table>
                 </div>

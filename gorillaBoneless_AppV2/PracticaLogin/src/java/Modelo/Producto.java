@@ -13,7 +13,19 @@ public class Producto {
     private String nombre;
     private String img;
     private double precio;
+    private int categoria;
 
+    public Producto() {
+    }
+
+    public Producto(int id, String nombre, String img, double precio, int categoria) {
+        this.id = id;
+        this.nombre = nombre;
+        this.img = img;
+        this.precio = precio;
+        this.categoria = categoria;
+    }
+    
     public int getId() {
         return id;
     }
@@ -46,14 +58,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public Producto() {
+    public int getCategoria() {
+        return categoria;
     }
 
-    public Producto(int id, String nombre, String img, double precio) {
-        this.id = id;
-        this.nombre = nombre;
-        this.img = img;
-        this.precio = precio;
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
     }
-    
+
 }
