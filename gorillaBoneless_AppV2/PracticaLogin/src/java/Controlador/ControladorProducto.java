@@ -22,6 +22,11 @@ public class ControladorProducto {
 "										<h2>$"+producto.getPrecio()+"</h2>\n" +
 "										<p>"+producto.getNombre()+"</p>\n" +
 "										<a href=\"product-details.jsp?id="+producto.getId()+"\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n" +
+"                                                                               <a href=\"carrito.jsp\" class=\"nav-item nav-link\"><span class=\"material-symbols-outlined\">\n" +
+"                                                                                     add_shopping_cart\n" +
+"                                                                                   </span>\n" +
+"                                                                               </a>\n" +
+"  "+                    
 "									</div>\n" +
 "									<div class=\"product-overlay\">\n" +
 "										<div class=\"overlay-content\">\n" +    
@@ -52,6 +57,10 @@ public class ControladorProducto {
 "										<h2>$"+producto.getPrecio()+"</h2>\n" +
 "										<p>"+producto.getNombre()+"</p>\n" +
 "										<a href=\"product-details.jsp?id="+producto.getId()+"\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n " +
+"                                                                               <a href=\"carrito.jsp\" class=\"nav-item nav-link\"><span class=\"material-symbols-outlined\">\n" +
+"                                                                                     add_shopping_cart\n" +
+"                                                                                   </span>\n" +
+"                                                                               </a>\n" +
 "									</div>\n" +
 "									<div class=\"product-overlay\">\n" +
 "										<div class=\"overlay-content\">\n" +    
@@ -77,6 +86,10 @@ public class ControladorProducto {
 "										<h2>$"+producto.getPrecio()+"</h2>\n" +
 "										<p>"+producto.getNombre()+"</p>\n" +
 "										<a href=\"product-details.jsp?id="+producto.getId()+"\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n " +
+"                                                                               <a href=\"carrito.jsp\" class=\"nav-item nav-link\"><span class=\"material-symbols-outlined\">\n" +
+"                                                                                     add_shopping_cart\n" +
+"                                                                                   </span>\n" +
+"                                                                               </a>\n" +                    
 "									</div>\n" +
 "									<div class=\"product-overlay\">\n" +
 "										<div class=\"overlay-content\">\n" +    

@@ -83,7 +83,7 @@
                                     settings
                                 </span>
                             </a>
-                            <a href="carrito.html" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
                             </a>
@@ -91,7 +91,7 @@
                                 <% out.println(usuario);%> 
                             </div>
                         </div>
-                        <a href="login.html" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
+                        <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                     </div>
                 </nav>
 
@@ -107,7 +107,7 @@
 
 
             <!-- Menu Start -->
-            
+
             <!-- Menu End -->
 
 
@@ -155,9 +155,10 @@
                             <div id="tab-1" class="tab-pane fade show p-0 active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <%=cp.getProductosHamburguesa()%>
+                                        <%=cp.getProductosHamburguesa()%>                                        
                                     </div>
                                 </div>
+
                             </div>
 
                             <div id="tab-2" class="tab-pane fade show p-0">
@@ -178,15 +179,59 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
 
-            <!-- cart Start -->
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
-
-            <!-- cart End -->
             <!-- Footer Start -->
-
+            <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
+                            <a class="btn btn-link" href="about.jsp">Nosotros</a>
+                            <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contáctanos</h4>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plaza Sendero - C. 300 85180, Franja
+                                Comercial 300, 85065 Cd Obregón, Son.</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210</p>
+                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>jorgvillagrana@hotmail.com </p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Horarios</h4>
+                            <h5 class="text-light fw-normal">Lunes - Sábado</h5>
+                            <p>10AM - 09PM</p>
+                            <h5 class="text-light fw-normal">Domingo</h5>
+                            <p>10AM - 05PM</p>
+                        </div>  
+                        <div class="col-lg-3 col-md-6">
+                            <h4><img id="logo-footer" src="img/gorillaBoneless.png" alt="lgo"></h4>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="footer-menu">
+                                    <a href="index.jsp">Inicio</a>
+                                    <a href="contact.jsp">Ayuda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Footer End -->
 
 

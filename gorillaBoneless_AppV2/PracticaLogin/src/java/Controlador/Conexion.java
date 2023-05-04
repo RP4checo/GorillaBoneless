@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * @author Omar López Chávez
  */
 public class Conexion {
-    
+
     private String USERNAME = "root";
     private String PASSWORD = "";
     private String HOST = "localhost";
@@ -18,8 +18,8 @@ public class Conexion {
     private String CLASSNAME = "com.mysql.jdbc.Driver";
     private String URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE;
     private Connection con;
-    
-     public Conexion() {
+
+    public Conexion() {
         try {
             Class.forName(CLASSNAME);
             con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -30,9 +30,9 @@ public class Conexion {
             System.err.println("Error en: " + e);
         }
     }
-    
+
     public Connection getConexion() {
         return con;
     }
-    
+
 }

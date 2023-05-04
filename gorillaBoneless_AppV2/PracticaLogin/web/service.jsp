@@ -1,22 +1,22 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%-- 
-    Document   : login.jsp
-    Created on : 1/05/2023, 01:07:56 AM
-    Author     : Usuario
+    Document   : service
+    Created on : May 3, 2023, 11:23:19 PM
+    Author     : pache
 --%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Gorillaz Boneless | Iniciar Sesión</title>
+    <title>Gorillaz Boneless | Servicios</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="img/gorillaBoneless.png" />
+    <link rel="icon" type="image/jpg" href="img/gorillaBoneless.png"/>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.jsp" class="navbar-brand p-0">
+                <a href="" class="navbar-brand p-0">
                     <h1 id="logo" class="text-primary m-0"><i class="logo"><img src="img/gorillaBoneless.png"
                                 alt="Logo"></i>Gorillaz Boneless</h1>
                 </a>
@@ -67,7 +67,7 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.jsp" class="nav-item nav-link">Inicio</a>
                         <a href="about.jsp" class="nav-item nav-link">Nosotros</a>
-                        <a href="service.jsp" class="nav-item nav-link">Servicios</a>
+                        <a href="service.jsp" class="nav-item nav-link active">Servicios</a>
                         <a href="menu.jsp" class="nav-item nav-link">Menú</a>
                         <a href="contact.jsp" class="nav-item nav-link">Contáctanos</a>
                     </div>
@@ -77,37 +77,63 @@
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Iniciar Sesión</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Servicios</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Iniciar Sesión</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Servicios</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Navbar & Hero End -->
-        <!-- s-->
 
-        <div class="signup-form">
-            <form action="InicioSesion1" method="post">
-                <h2>Inicia Sesión</h2>                
-                <div class="form-group">
-                    <input type="text" class="form-control" name="usuario" placeholder="Usuario" required="required">
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                                <h5>Cocineros de calidad</h5>
+                                <p>Chefs con +10 años de experiencia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <h5>Comida de Calidad</h5>
+                                <p>Alimentos frescos y bien preparados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
+                                <h5>Ordena Online</h5>
+                                <p>Servicio de pedidos por internet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                                <h5>Excelente Atención al Cliente</h5>
+                                <p>Trato amable y servicial al cliente</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="pass" placeholder="Contraseña" required="required">
-                </div>
-                <div class="form-group">
-                    <label class="form-check-label"><input type="checkbox"> Recuérdame</label>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Sesión</button>
-                </div>
-            </form>
-            <div class="text-red">¿Aún no tienes cuenta? <a class="text-red" href="register.jsp">Registrarse</a></div>
+            </div>
         </div>
+        <!-- Service End -->
 
 
         <!-- Footer Start -->
@@ -115,8 +141,7 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?
-                        </h4>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
                         <a class="btn btn-link" href="about.jsp">Nosotros</a>
                         <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
                     </div>
@@ -127,13 +152,9 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>jorgvillagrana@hotmail.com </p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social"
-                                href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social"
-                                href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                        </div>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                             </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Horarios</h4>
@@ -141,19 +162,17 @@
                         <p>10AM - 09PM</p>
                         <h5 class="text-light fw-normal">Domingo</h5>
                         <p>10AM - 05PM</p>
-                    </div>
+                    </div>     
                     <div class="col-lg-3 col-md-6">
                         <h4><img id="logo-footer" src="img/gorillaBoneless.png" alt="lgo"></h4>
-                    </div>
+                    </div>                
                 </div>
             </div>
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom"
-                                href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz
-                                Boneless</a>, Todos los derechos reservados.
+                            &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

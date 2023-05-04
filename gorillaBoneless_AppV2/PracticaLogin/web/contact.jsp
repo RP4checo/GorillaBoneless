@@ -1,22 +1,22 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%-- 
-    Document   : login.jsp
-    Created on : 1/05/2023, 01:07:56 AM
-    Author     : Usuario
+    Document   : contact
+    Created on : May 3, 2023, 11:18:18 PM
+    Author     : pache
 --%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Gorillaz Boneless | Iniciar Sesión</title>
+    <title>Gorillaz Boneless | Contáctanos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="img/gorillaBoneless.png" />
+    <link rel="icon" type="image/jpg" href="img/gorillaBoneless.png"/>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.jsp" class="navbar-brand p-0">
+                <a href="" class="navbar-brand p-0">
                     <h1 id="logo" class="text-primary m-0"><i class="logo"><img src="img/gorillaBoneless.png"
                                 alt="Logo"></i>Gorillaz Boneless</h1>
                 </a>
@@ -69,7 +69,7 @@
                         <a href="about.jsp" class="nav-item nav-link">Nosotros</a>
                         <a href="service.jsp" class="nav-item nav-link">Servicios</a>
                         <a href="menu.jsp" class="nav-item nav-link">Menú</a>
-                        <a href="contact.jsp" class="nav-item nav-link">Contáctanos</a>
+                        <a href="contact.jsp" class="nav-item nav-link active">Contáctanos</a>
                     </div>
                     <a href="login.jsp" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
                 </div>
@@ -77,37 +77,85 @@
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Iniciar Sesión</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contáctanos</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Iniciar Sesión</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Contáctanos</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Navbar & Hero End -->
-        <!-- s-->
 
-        <div class="signup-form">
-            <form action="InicioSesion1" method="post">
-                <h2>Inicia Sesión</h2>                
-                <div class="form-group">
-                    <input type="text" class="form-control" name="usuario" placeholder="Usuario" required="required">
+
+        <!-- Contact Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contáctanos</h5>
+                    <h1 class="mb-5">Contáctanos por cualquier consulta</h1>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="pass" placeholder="Contraseña" required="required">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="row gy-4">
+                            <div class="col-md-4">
+                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Pedidos</h5>
+                                <p><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210 </p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>jorgvillagrana@hotmail.com </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                        <a href="https://goo.gl/maps/ZRebmxkpDn6ZGvc26" target="_blank">
+                            <img src="img/maps.png" class="maps">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Tu Nombre</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Your Email">
+                                            <label for="email">Tu Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Tema</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here"
+                                                id="message" style="height: 150px"></textarea>
+                                            <label for="message">Mensaje</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label class="form-check-label"><input type="checkbox"> Recuérdame</label>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Sesión</button>
-                </div>
-            </form>
-            <div class="text-red">¿Aún no tienes cuenta? <a class="text-red" href="register.jsp">Registrarse</a></div>
+            </div>
         </div>
+        <!-- Contact End -->
 
 
         <!-- Footer Start -->
@@ -115,8 +163,7 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?
-                        </h4>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
                         <a class="btn btn-link" href="about.jsp">Nosotros</a>
                         <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
                     </div>
@@ -144,7 +191,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4><img id="logo-footer" src="img/gorillaBoneless.png" alt="lgo"></h4>
-                    </div>
+                    </div> 
                 </div>
             </div>
             <div class="container">
