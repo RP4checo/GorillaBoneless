@@ -4,6 +4,7 @@
     Author     : Usuario
 --%>
 
+<%@page import="Controlador.ControladorProductoProfe"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     HttpSession objSesion = request.getSession(false);
@@ -14,7 +15,7 @@
 %>
 <%@page import="Controlador.ControladorProducto" %>
 <%
-    ControladorProducto cp = new ControladorProducto();
+    ControladorProductoProfe cp = new ControladorProductoProfe();
 %>
 
 <!DOCTYPE html>

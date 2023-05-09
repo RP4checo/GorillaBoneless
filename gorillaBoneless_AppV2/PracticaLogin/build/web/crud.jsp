@@ -10,22 +10,22 @@
 <html lang="en">
 
     <head>
-        
+
         <script>
-    function editarProducto(id_producto, nombre, img_producto, precio, categoria) {
-        document.getElementById("id_producto").value = id_producto;
-        document.getElementById("nombre_edit").value = nombre;
-        document.getElementById("img_producto_edit").value = img_producto;
-        document.getElementById("precio_edit").value = precio;
-        document.getElementById("categoria_edit").value = categoria;
+            function editarProducto(id_producto, nombre, img_producto, precio, categoria) {
+                document.getElementById("id_producto").value = id_producto;
+                document.getElementById("nombre_edit").value = nombre;
+                document.getElementById("img_producto_edit").value = img_producto;
+                document.getElementById("precio_edit").value = precio;
+                document.getElementById("categoria_edit").value = categoria;
 
-        document.getElementById("editProductoForm").style.display = "block";
-    }
+                document.getElementById("editProductoForm").style.display = "block";
+            }
 
-    function ocultarFormulario() {
-        document.getElementById("editProductoForm").style.display = "none";
-    }
-</script>
+            function ocultarFormulario() {
+                document.getElementById("editProductoForm").style.display = "none";
+            }
+        </script>
 
         <meta charset="utf-8">
         <title>Gorillaz Boneless | Administración</title>
@@ -113,21 +113,21 @@
                             </div>
                         </div>
                         <table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Código</th>
-            <th>Nombre</th>
-            <th>Imagen</th>
-            <th>Precio</th>
-            <th>Categoría</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <%=cp.getProductosTabla()%>
-    </tbody>
-</table>
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Nombre</th>
+                                    <th>Imagen</th>
+                                    <th>Precio</th>
+                                    <th>Categoría</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%=cp.getProductosTabla()%>
+                            </tbody>
+                        </table>
 
                     </div>
                 </div>
@@ -138,61 +138,86 @@
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Nombre del producto" required class="form-control">
                         </div>
+                        <br>
                         <div class="form-group">
                             <input type="text" name="img_producto" placeholder="URL de la imagen" required class="form-control">
                         </div>
+                        <br>
                         <div class="form-group">
                             <input type="number" step="0.01" name="precio" placeholder="Precio" required class="form-control">
                         </div>
+                        <br>
                         <div class="form-group">
                             <input type="number" name="categoria" placeholder="Categoría" required class="form-control">
                         </div>
+                        <br>
                         <button type="submit" class="btn btn-primary">Guardar producto</button>
+                        <br>
                     </form>
                 </div>
             </div>
-    
-    <div class="container-lg" id="editProductoForm" style="display:none;">
-    <h3 class="mt-5">Editar Producto</h3>
-    <form action="UpdateProductoServlet" method="post" class="mt-4">
-        <input type="hidden" name="id_producto" id="id_producto">
-        <div class="form-group">
-            <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="number" name="categoria" id="categoria_edit" placeholder="Categoría" required class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">Guardar cambios</button>
-        <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
-    </form>
-</div>
 
-    
+            <div class="container-lg" id="editProductoForm" style="display:none;">
+                <h3 class="mt-5">Editar Producto</h3>
+                <form action="UpdateProductoServlet" method="post" class="mt-4">
+                    <input type="hidden" name="id_producto" id="id_producto">
+                    <div class="form-group">
+                        <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="categoria" id="categoria_edit" placeholder="Categoría" required class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
+                </form>
+            </div>
 
-           <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+            <!-- Footer Start -->
+            <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="footer-menu">
+                                    <a href="index.jsp">Inicio</a>
+                                    <a href="contact.jsp">Ayuda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 
 </html>

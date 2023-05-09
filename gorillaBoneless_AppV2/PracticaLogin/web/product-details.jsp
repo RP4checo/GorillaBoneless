@@ -10,7 +10,7 @@
 <%@page import="Modelo.Producto"%>
 <%
     int id = Integer.parseInt(request.getParameter("id"));
-    Producto producto = new ControladorProducto().getProducto(id);
+    Producto producto = new ControladorProducto().getProductoById(id); // Corregido
 %>
 
 <!DOCTYPE html>
