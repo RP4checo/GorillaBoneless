@@ -20,6 +20,14 @@
         <servlet-name>DeleteProductoServlet</servlet-name>
         <servlet-class>servlet.DeleteProductoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditProductoServlet</servlet-name>
+        <servlet-class>servlet.EditProductoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateProductoServlet</servlet-name>
+        <servlet-class>servlet.UpdateProductoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>DeleteProductoServlet</servlet-name>
         <url-pattern>/DeleteProductoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditProductoServlet</servlet-name>
+        <url-pattern>/EditProductoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateProductoServlet</servlet-name>
+        <url-pattern>/UpdateProductoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

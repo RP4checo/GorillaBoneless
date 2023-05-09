@@ -10,6 +10,23 @@
 <html lang="en">
 
     <head>
+        
+        <script>
+    function editarProducto(id_producto, nombre, img_producto, precio, categoria) {
+        document.getElementById("id_producto").value = id_producto;
+        document.getElementById("nombre_edit").value = nombre;
+        document.getElementById("img_producto_edit").value = img_producto;
+        document.getElementById("precio_edit").value = precio;
+        document.getElementById("categoria_edit").value = categoria;
+
+        document.getElementById("editProductoForm").style.display = "block";
+    }
+
+    function ocultarFormulario() {
+        document.getElementById("editProductoForm").style.display = "none";
+    }
+</script>
+
         <meta charset="utf-8">
         <title>Gorillaz Boneless | Administración</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -134,6 +151,29 @@
                     </form>
                 </div>
             </div>
+    
+    <div class="container-lg" id="editProductoForm" style="display:none;">
+    <h3 class="mt-5">Editar Producto</h3>
+    <form action="UpdateProductoServlet" method="post" class="mt-4">
+        <input type="hidden" name="id_producto" id="id_producto">
+        <div class="form-group">
+            <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="number" name="categoria" id="categoria_edit" placeholder="Categoría" required class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
+    </form>
+</div>
+
+    
 
            <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
