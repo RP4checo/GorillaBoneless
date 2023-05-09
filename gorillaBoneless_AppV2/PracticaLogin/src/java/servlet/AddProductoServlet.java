@@ -42,7 +42,7 @@ public class AddProductoServlet extends HttpServlet {
         ControladorProducto cp = new ControladorProducto();
         cp.addProducto(producto);
 
-        response.sendRedirect("crud2.jsp");
+        response.sendRedirect("crud.jsp");
     }
 
     @Override

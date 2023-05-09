@@ -91,19 +91,19 @@ public Producto getProductoById(int id_producto) {
 //        e.printStackTrace();
 //    }
 //}
-//
-//public void deleteProducto(int id_producto) {
-//    try {
-//        String query = "DELETE FROM productos WHERE id_producto = ?";
-//        PreparedStatement stmt = connection.prepareStatement(query);
-//        stmt.setInt(1, id_producto);
-//
-//        stmt.executeUpdate();
-//        stmt.close();
-//    } catch (SQLException e) {
-//        e.printStackTrace();
-//    }
-//}
+
+public void deleteProducto(int id_producto) {
+    try {
+        String query = "DELETE FROM productos WHERE id_producto = ?";
+        PreparedStatement stmt = connection.prepareStatement(query);
+        stmt.setInt(1, id_producto);
+
+        stmt.executeUpdate();
+        stmt.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
 
 
 
