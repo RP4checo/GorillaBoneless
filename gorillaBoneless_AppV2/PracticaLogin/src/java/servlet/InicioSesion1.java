@@ -33,17 +33,17 @@ public class InicioSesion1 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String usuario = request.getParameter("usuario");
         String clave = request.getParameter("pass");
-        
+
         //Usuario usuario=new Usuario();
         //usuario.nombre= request.getParameter("usuario");
-        
         Consultas sql = new Consultas();
-        if(sql.aunteticacion(usuario, clave)){
+        if (sql.aunteticacion(usuario, clave)) {
             HttpSession objSesion = request.getSession(true);
             objSesion.setAttribute("usuario", usuario);
-            response.sendRedirect("carrito.jsp");
-        }else {
-            response.sendRedirect("contact.html");
+            //response.sendRedirect("carrito.jsp");
+            response.sendRedirect("crud.jsp");
+        } else {
+            response.sendRedirect("contact.jsp");
         }
     }
 

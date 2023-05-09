@@ -150,8 +150,8 @@
                             }
 
                         } catch (SQLException e) {
-                            // Si hubo un error, redirigir a la página "login.html"
-                            response.sendRedirect("login.html");
+                            // Si hubo un error, redirigir a la página "login.jsp"
+                            response.sendRedirect("login.jsp");
                             e.printStackTrace();
                         } finally {
                             // Cerrar la conexión y liberar recursos
