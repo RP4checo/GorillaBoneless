@@ -34,5 +34,14 @@ public class Conexion {
     public Connection getConexion() {
         return con;
     }
-
+public void cerrarConexion() {
+    try {
+        con.close();
+        System.out.println("Conexión cerrada correctamente"); // Agregar este mensaje
+    } catch (SQLException e) {
+        System.err.println("Error al cerrar la conexión: " + e);
+    }
 }
+}
+    
+
