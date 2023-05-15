@@ -133,101 +133,101 @@
                 </div>
 
                 <div class="container-lg">
-    <h3 class="mt-5">Agregar Producto</h3>
-    <form action="AddProductoServlet" method="post" class="mt-4">
-        <div class="form-group">
-            <input type="text" name="nombre" placeholder="Nombre del producto" required class="form-control">
-        </div>
-        <br>
-        <div class="form-group">
-            <input type="text" name="img_producto" placeholder="URL de la imagen" required class="form-control">
-        </div>
-        <br>
-        <div class="form-group">
-            <input type="number" step="0.01" name="precio" placeholder="Precio" required class="form-control">
-        </div>
-        <br>
-        <div class="form-group">
-            <select name="categoria" required class="form-control">
-                <option value="">Selecciona una categoría</option>
-                <option value="1">Comida</option>
-                <option value="2">Bebida</option>
-                <option value="3">Combo</option>
-            </select>
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Guardar producto</button>
-        <br>
-    </form>
-</div>
+                    <h3 class="mt-5">Agregar Producto</h3>
+                    <form action="AddProductoServlet" method="post" class="mt-4">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre del producto" required class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" name="img_producto" placeholder="URL de la imagen" required class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="number" step="0.01" name="precio" placeholder="Precio" required class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <select name="categoria" required class="form-control">
+                                <option value="">Selecciona una categoría</option>
+                                <option value="1">Comida</option>
+                                <option value="2">Bebida</option>
+                                <option value="3">Postre</option>
+                            </select>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Guardar producto</button>
+                        <br>
+                    </form>
+                </div>
 
-<div class="container-lg" id="editProductoForm" style="display:none;">
-    <h3 class="mt-5">Editar Producto</h3>
-    <form action="UpdateProductoServlet" method="post" class="mt-4">
-        <input type="hidden" name="id_producto" id="id_producto">
-        <div class="form-group">
-            <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
-        </div>
-        <div class="form-group">
-            <select name="categoria" id="categoria_edit" required class="form-control">
-                <option value="">Selecciona una categoría</option>
-                <option value="1">Comida</option>
-                <option value="2">Bebida</option>
-                <option value="3">Combo</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Guardar cambios</button>
-        <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
-    </form>
-</div>
+                <div class="container-lg" id="editProductoForm" style="display:none;">
+                    <h3 class="mt-5">Editar Producto</h3>
+                    <form action="UpdateProductoServlet" method="post" class="mt-4">
+                        <input type="hidden" name="id_producto" id="id_producto">
+                        <div class="form-group">
+                            <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select name="categoria" id="categoria_edit" required class="form-control">
+                                <option value="">Selecciona una categoría</option>
+                                <option value="1">Comida</option>
+                                <option value="2">Bebida</option>
+                                <option value="3">Postre</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
+                    </form>
+                </div>
 
 
-            <!-- Footer Start -->
-            <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-                <div class="container">
-                    <div class="copyright">
-                        <div class="row">
-                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
-                            </div>
-                            <div class="col-md-6 text-center text-md-end">
-                                <div class="footer-menu">
-                                    <a href="index.jsp">Inicio</a>
-                                    <a href="contact.jsp">Ayuda</a>
+                <!-- Footer Start -->
+                <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="container">
+                        <div class="copyright">
+                            <div class="row">
+                                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                    &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
+                                </div>
+                                <div class="col-md-6 text-center text-md-end">
+                                    <div class="footer-menu">
+                                        <a href="index.jsp">Inicio</a>
+                                        <a href="contact.jsp">Ayuda</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Footer End -->
+
+
+
+                <!-- Back to Top -->
+                <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
             </div>
-            <!-- Footer End -->
 
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/wow/wow.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/counterup/counterup.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/tempusdominus/js/moment.min.js"></script>
+            <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+            <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-        </div>
-
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/tempusdominus/js/moment.min.js"></script>
-        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
     </body>
 
 </html>

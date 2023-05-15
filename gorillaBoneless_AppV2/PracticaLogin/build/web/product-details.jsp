@@ -112,7 +112,7 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-sm-9 padding-right">
                         <div class="view-product">
-                            <img src="<%=producto.getImg()%>" alt="" width="230" height="230"/>
+                            <img src="<%=producto.getImg_producto()%>" alt="" width="230" height="230"/>
                             <h2><%=producto.getNombre()%></h2>
                             <h4>Web ID: <%=producto.getId()%></h4>
                             <!--<img src="images/rating.jpg" alt="" width="250" height="100"/>-->

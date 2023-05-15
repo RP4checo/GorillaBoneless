@@ -13,30 +13,35 @@ public class Consultas extends Conexion {
         
     }
     
-    public boolean aunteticacion(String usuario, String clave){
+public boolean aunteticacion(String usuario, String clave) {
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
-            String consulta = "select * from usuarios where nombre=? and pass=?";
-            System.out.println("Consulta es " + consulta);
+            String consulta = "SELECT * FROM usuarios WHERE nombre=? AND pass=?";
+            System.out.println("Consulta: " + consulta);
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, usuario);
             pst.setString(2, clave);
             rs = pst.executeQuery();
-            
-            if(rs.absolute(1)){
+
+            if (rs.next()) {
                 return true;
             }
-        }catch(Exception e){
-            System.out.println("Error en " + e);
-        }finally {
-            try{
-                if(getConexion() != null)
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (getConexion() != null) {
                     getConexion().close();
-                if(pst != null) pst.close();
-                if(rs != null) rs.close();
-            }catch(Exception e){
-                System.out.println("Error en " + e);
+                }
+            } catch (Exception e) {
+                System.out.println("Error al cerrar recursos: " + e);
             }
         }
         return false;

@@ -5,6 +5,7 @@
 package Controlador;
 
 import Controlador.Conexion;
+import Modelo.ModeloProducto;
 import Modelo.Producto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -133,5 +134,63 @@ public class ControladorProducto {
 
         return sb.toString();
     }
+public List<Producto> getProductosByCategoria(int categoria) {
+    List<Producto> productos = new ArrayList<>();
+
+    try {
+        String query = "SELECT * FROM productos WHERE categoria = ?";
+        PreparedStatement stmt = connection.prepareStatement(query);
+        stmt.setInt(1, categoria);
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {
+            int id = rs.getInt("id_producto");
+            String nombre = rs.getString("nombre");
+            String img_producto = rs.getString("img_producto");
+            double precio = rs.getDouble("precio");
+            Producto producto = new Producto(id, nombre, img_producto, precio, categoria);
+            productos.add(producto);
+        }
+
+        rs.close();
+        stmt.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return productos;
+}
+
+
+public String getProductosByCategoriaHTML(int categoria) {
+    ModeloProducto mp = new ModeloProducto();
+    List<Producto> productos = getProductosByCategoria(categoria);
+    StringBuilder htmlCode = new StringBuilder();
+
+    for (Producto producto : productos) {
+        htmlCode.append("<div class=\"col-sm-4\">\n");
+        htmlCode.append("    <div class=\"product-image-wrapper\">\n");
+        htmlCode.append("        <div class=\"single-products\">\n");
+        htmlCode.append("            <div class=\"productinfo text-center\">\n");
+        htmlCode.append("                <img class=\"img-fluid\" height=\"250\" width=\"250\" src=\"").append(producto.getImg_producto()).append("\" alt=\"\" />\n");
+        htmlCode.append("                <h2>$").append(producto.getPrecio()).append("</h2>\n");
+        htmlCode.append("                <p>").append(producto.getNombre()).append("</p>\n");
+        htmlCode.append("                <a href=\"product-details.jsp?id=").append(producto.getId()).append("\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n");
+        htmlCode.append("                <a href=\"carrito.jsp\" class=\"nav-item nav-link\"><span class=\"material-symbols-outlined\">\n");
+        htmlCode.append("                     add_shopping_cart\n");
+        htmlCode.append("                   </span>\n");
+        htmlCode.append("                </a>\n");
+        htmlCode.append("            </div>\n");
+        htmlCode.append("            <div class=\"product-overlay\">\n");
+        htmlCode.append("                <div class=\"overlay-content\">\n");
+        htmlCode.append("                </div>\n");
+        htmlCode.append("            </div>\n");
+        htmlCode.append("        </div>\n");
+        htmlCode.append("    </div>\n");
+        htmlCode.append("</div>");
+    }
+
+    return htmlCode.toString();
+}
 
 }

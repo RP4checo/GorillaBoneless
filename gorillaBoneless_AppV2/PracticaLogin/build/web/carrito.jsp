@@ -4,11 +4,10 @@
     Author     : Usuario
 --%>
 
-<%@page import="Controlador.ControladorProductoProfe"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Controlador.ControladorProducto" %>
 <%
-    ControladorProductoProfe cp = new ControladorProductoProfe();
+    ControladorProducto cp = new ControladorProducto();
     
     HttpSession objSesion = request.getSession(false);
     String usuario = (String) objSesion.getAttribute("usuario");
@@ -90,7 +89,7 @@
                             </a>
                             <div class="nav-item nav-link">
                                 <% out.println(usuario);%> 
-                            </div>
+                        </div>
                         </div>
                         <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                     </div>
@@ -156,7 +155,7 @@
                             <div id="tab-1" class="tab-pane fade show p-0 active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <%=cp.getProductosHamburguesa()%>                                        
+                                        <%=cp.getProductosByCategoriaHTML(1)%>                                        
                                     </div>
                                 </div>
 
@@ -165,7 +164,7 @@
                             <div id="tab-2" class="tab-pane fade show p-0">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <%=cp.getProductosBebidas()%>
+                                        <%=cp.getProductosByCategoriaHTML(2)%>     
                                     </div>
                                 </div>
                             </div>
@@ -173,14 +172,14 @@
                             <div id="tab-3" class="tab-pane fade show p-0">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <%=cp.getProductosPostres()%>
+                                        <%=cp.getProductosByCategoriaHTML(3)%>  
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>                 
 
             <!-- Back to Top -->
             <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
