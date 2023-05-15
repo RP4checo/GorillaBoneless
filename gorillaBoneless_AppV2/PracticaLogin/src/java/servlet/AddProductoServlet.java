@@ -35,7 +35,7 @@ public class AddProductoServlet extends HttpServlet {
 
         Producto producto = new Producto();
         producto.setNombre(nombre);
-        producto.setImg(img_producto);
+        producto.setImg_producto(img_producto);
         producto.setPrecio(precio);
         producto.setCategoria(categoria);
 

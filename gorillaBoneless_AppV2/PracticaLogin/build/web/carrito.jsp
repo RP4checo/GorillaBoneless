@@ -6,16 +6,16 @@
 
 <%@page import="Controlador.ControladorProductoProfe"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Controlador.ControladorProducto" %>
 <%
+    ControladorProductoProfe cp = new ControladorProductoProfe();
+    
     HttpSession objSesion = request.getSession(false);
     String usuario = (String) objSesion.getAttribute("usuario");
     if (usuario.equals("")) {
         response.sendRedirect("index.jsp");
     }
-%>
-<%@page import="Controlador.ControladorProducto" %>
-<%
-    ControladorProductoProfe cp = new ControladorProductoProfe();
+
 %>
 
 <!DOCTYPE html>

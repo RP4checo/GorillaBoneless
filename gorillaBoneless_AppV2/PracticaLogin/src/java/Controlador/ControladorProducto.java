@@ -34,7 +34,7 @@ public class ControladorProducto {
             String query = "INSERT INTO productos (nombre, img_producto, precio, categoria) VALUES (?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, producto.getNombre());
-            stmt.setString(2, producto.getImg());
+            stmt.setString(2, producto.getImg_producto());
             stmt.setDouble(3, producto.getPrecio());
             stmt.setInt(4, producto.getCategoria());
 
@@ -79,7 +79,7 @@ public class ControladorProducto {
             String query = "UPDATE productos SET nombre = ?, img_producto = ?, precio = ?, categoria = ? WHERE id_producto = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, producto.getNombre());
-            stmt.setString(2, producto.getImg());
+            stmt.setString(2, producto.getImg_producto());
             stmt.setDouble(3, producto.getPrecio());
             stmt.setInt(4, producto.getCategoria());
             stmt.setInt(5, producto.getId());
@@ -116,7 +116,7 @@ public class ControladorProducto {
                 sb.append("<tr>");
                 sb.append("<td>").append(rs.getInt("id_producto")).append("</td>");
                 sb.append("<td>").append(rs.getString("nombre")).append("</td>");
-                sb.append("<td>").append(rs.getString("img_producto")).append("</td>");
+                sb.append("<td>").append("<img src='" + rs.getString("img_producto") + "' width='100' height='100'>").append("</td>");
                 sb.append("<td>").append(rs.getDouble("precio")).append("</td>");
                 sb.append("<td>").append(rs.getInt("categoria")).append("</td>");
                 sb.append("<td>").append("<button type='button' onclick=\"editarProducto(" + rs.getInt("id_producto") + ", '" + rs.getString("nombre") + "', '" + rs.getString("img_producto") + "', " + rs.getDouble("precio") + ", " + rs.getInt("categoria") + ");\">Editar</button>").append("</td>");

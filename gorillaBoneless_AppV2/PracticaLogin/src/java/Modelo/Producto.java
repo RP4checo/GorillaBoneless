@@ -11,7 +11,7 @@ package Modelo;
 public class Producto {
     private int id;
     private String nombre;
-    private String img;
+    private String img_producto;
     private double precio;
     private int categoria;
 
@@ -21,7 +21,7 @@ public class Producto {
     public Producto(int id, String nombre, String img, double precio, int categoria) {
         this.id = id;
         this.nombre = nombre;
-        this.img = img;
+        this.img_producto = img;
         this.precio = precio;
         this.categoria = categoria;
     }
@@ -42,12 +42,12 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public String getImg() {
-        return img;
+    public String getImg_producto() {
+        return img_producto;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImg_producto(String img_producto) {
+        this.img_producto = img_producto;
     }
 
     public double getPrecio() {

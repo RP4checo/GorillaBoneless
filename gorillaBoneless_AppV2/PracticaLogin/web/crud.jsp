@@ -133,50 +133,60 @@
                 </div>
 
                 <div class="container-lg">
-                    <h3 class="mt-5">Agregar Producto</h3>
-                    <form action="AddProductoServlet" method="post" class="mt-4">
-                        <div class="form-group">
-                            <input type="text" name="nombre" placeholder="Nombre del producto" required class="form-control">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="text" name="img_producto" placeholder="URL de la imagen" required class="form-control">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="number" step="0.01" name="precio" placeholder="Precio" required class="form-control">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="number" name="categoria" placeholder="Categoría" required class="form-control">
-                        </div>
-                        <br>
-                        <button type="submit" class="btn btn-primary">Guardar producto</button>
-                        <br>
-                    </form>
-                </div>
-            </div>
+    <h3 class="mt-5">Agregar Producto</h3>
+    <form action="AddProductoServlet" method="post" class="mt-4">
+        <div class="form-group">
+            <input type="text" name="nombre" placeholder="Nombre del producto" required class="form-control">
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="text" name="img_producto" placeholder="URL de la imagen" required class="form-control">
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="number" step="0.01" name="precio" placeholder="Precio" required class="form-control">
+        </div>
+        <br>
+        <div class="form-group">
+            <select name="categoria" required class="form-control">
+                <option value="">Selecciona una categoría</option>
+                <option value="1">Comida</option>
+                <option value="2">Bebida</option>
+                <option value="3">Combo</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar producto</button>
+        <br>
+    </form>
+</div>
 
-            <div class="container-lg" id="editProductoForm" style="display:none;">
-                <h3 class="mt-5">Editar Producto</h3>
-                <form action="UpdateProductoServlet" method="post" class="mt-4">
-                    <input type="hidden" name="id_producto" id="id_producto">
-                    <div class="form-group">
-                        <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="categoria" id="categoria_edit" placeholder="Categoría" required class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                    <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
-                </form>
-            </div>
+<div class="container-lg" id="editProductoForm" style="display:none;">
+    <h3 class="mt-5">Editar Producto</h3>
+    <form action="UpdateProductoServlet" method="post" class="mt-4">
+        <input type="hidden" name="id_producto" id="id_producto">
+        <div class="form-group">
+            <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
+        </div>
+        <div class="form-group">
+            <select name="categoria" id="categoria_edit" required class="form-control">
+                <option value="">Selecciona una categoría</option>
+                <option value="1">Comida</option>
+                <option value="2">Bebida</option>
+                <option value="3">Combo</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
+    </form>
+</div>
+
 
             <!-- Footer Start -->
             <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">

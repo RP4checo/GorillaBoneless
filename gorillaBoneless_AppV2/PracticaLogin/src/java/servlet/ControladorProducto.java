@@ -21,7 +21,7 @@ public class ControladorProducto {
 "							<div class=\"product-image-wrapper\">\n" +
 "								<div class=\"single-products\">\n" +
 "									<div class=\"productinfo text-center\">\n" +
-"										<img src=\""+producto.getImg()+"\" alt=\"\" />\n" +
+"										<img src=\""+producto.getImg_producto()+"\" alt=\"\" />\n" +
 "										<h2>$"+producto.getPrecio()+"</h2>\n" +
 "										<p>"+producto.getNombre()+"</p>\n" +
 "										<a href=\"product-details.jsp?id="+producto.getId()+"\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n" +
