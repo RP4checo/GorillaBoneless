@@ -83,7 +83,7 @@
                                     settings
                                 </span>
                             </a>
-                            <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            <a href="checkout.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
                             </a>

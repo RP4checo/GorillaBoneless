@@ -168,12 +168,15 @@
                         <div class="form-group">
                             <input type="text" name="nombre" id="nombre_edit" placeholder="Nombre del producto" required class="form-control">
                         </div>
+                        <br>
                         <div class="form-group">
                             <input type="text" name="img_producto" id="img_producto_edit" placeholder="URL de la imagen" required class="form-control">
                         </div>
+                        <br>
                         <div class="form-group">
                             <input type="number" step="0.01" name="precio" id="precio_edit" placeholder="Precio" required class="form-control">
                         </div>
+                        <br>
                         <div class="form-group">
                             <select name="categoria" id="categoria_edit" required class="form-control">
                                 <option value="">Selecciona una categoría</option>
@@ -182,6 +185,7 @@
                                 <option value="3">Postre</option>
                             </select>
                         </div>
+                        <br>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                         <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
                     </form>

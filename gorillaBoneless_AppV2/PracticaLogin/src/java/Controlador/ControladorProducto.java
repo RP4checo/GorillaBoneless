@@ -176,7 +176,7 @@ public String getProductosByCategoriaHTML(int categoria) {
         htmlCode.append("                <h2>$").append(producto.getPrecio()).append("</h2>\n");
         htmlCode.append("                <p>").append(producto.getNombre()).append("</p>\n");
         htmlCode.append("                <a href=\"product-details.jsp?id=").append(producto.getId()).append("\" class=\"btn btn-default add-to-cart\"><i class=\"fa fa-shopping-cart\"></i>Ver detalles</a>\n");
-        htmlCode.append("                <a href=\"carrito.jsp\" class=\"nav-item nav-link\"><span class=\"material-symbols-outlined\">\n");
+        htmlCode.append("                <a href=\"cart.jsp\" class=\"nav-item nav-link\"><span class=\"material-symbols-outlined\">\n");
         htmlCode.append("                     add_shopping_cart\n");
         htmlCode.append("                   </span>\n");
         htmlCode.append("                </a>\n");
