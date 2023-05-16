@@ -28,6 +28,10 @@
         <servlet-name>UpdateProductoServlet</servlet-name>
         <servlet-class>servlet.UpdateProductoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GuardarPedidoServlet</servlet-name>
+        <servlet-class>servlet.GuardarPedidoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>UpdateProductoServlet</servlet-name>
         <url-pattern>/UpdateProductoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuardarPedidoServlet</servlet-name>
+        <url-pattern>/GuardarPedidoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

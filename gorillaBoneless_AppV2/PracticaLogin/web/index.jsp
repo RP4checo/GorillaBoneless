@@ -64,7 +64,6 @@
                             <a href="service.jsp" class="nav-item nav-link">Servicios</a>
                             <a href="menu.jsp" class="nav-item nav-link">Menú</a>
                             <a href="contact.jsp" class="nav-item nav-link">Contáctanos</a>
-                            <a href="carrito.jsp" class="nav-item nav-link">Carrito</a>
                         </div>
                         <a href="login.jsp" class="btn btn-primary py-2 px-4">Iniciar Sesión</a>
                     </div>

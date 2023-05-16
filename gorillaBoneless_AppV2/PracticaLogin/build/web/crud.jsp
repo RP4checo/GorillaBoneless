@@ -84,10 +84,12 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0 pe-4">
-
-                            <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     settings
                                 </span></a>
+                            <a href="cart.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
                         </div>
                         <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                     </div>
@@ -100,7 +102,7 @@
                 </div>
             </div>
             <!-- Navbar & Hero End -->
-            
+
 
             <!-- Crud start -->
             <div class="container-lg">

@@ -132,6 +132,7 @@
                                             total += a.getCantidad() * producto.getPrecio();
                                 %>
                                 <tr>
+                                    <!-- Código HTML de cada fila del carrito -->
                                     <td class="cart_product">
                                         <a href=""><img src="<%= producto.getImg_producto()%>" alt="" width="120"></a>
                                     </td>
@@ -153,7 +154,7 @@
                                         <p class="cart_total_price">$<%= Math.round(producto.getPrecio() * a.getCantidad() * 100.0) / 100.0%></p>
                                     </td>
                                     <td class="cart_delete">
-                                        <span id="idarticulo" style="display:none;"><%= producto.getId()%></span>
+                                        <span class="idarticulo" style="display:none;" data-id="<%= producto.getId()%>"></span>
                                         <a class="cart_quantity_delete" href="" id="deleteitem"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
@@ -169,47 +170,40 @@
                 </div>
             </section>
 
-            <div class="shopper-informations">
-                <div class="row">
-                    <div class="col-sm-5 clearfix">
-                        <div class="bill-to">
-                            <div class="form-one">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="pedido-nombre">Nombre del pedido</label>
-                                        <input type="text" class="form-control" id="pedido-nombre" placeholder="Nombre del pedido">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pedido-correo">Correo*</label>
-                                        <input type="email" class="form-control" id="pedido-correo" placeholder="Correo*">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pedido-nombre">Nombre *</label>
-                                        <input type="text" class="form-control" id="pedido-nombre" placeholder="Nombre *">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pedido-apellido">Apellido*</label>
-                                        <input type="text" class="form-control" id="pedido-apellido" placeholder="Apellido*">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="direccion1">Dirección 1 *</label>
-                                        <input type="text" class="form-control" id="direccion1" placeholder="Dirección 1 *">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="direccion2">Dirección 2</label>
-                                        <input type="text" class="form-control" id="direccion2" placeholder="Dirección 2">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="order-message">
-                            <p>Orden</p>
-                            <textarea name="message" class="form-control" placeholder="Comentarios" rows="6"></textarea>
-                        </div>
-                    </div>
+            <form action="GuardarPedidoServlet" method="post">
+                <div class="form-group">
+                    <label for="pedido-nombre">Nombre del pedido</label>
+                    <input type="text" class="form-control" id="pedido-nombre" name="pedido-nombre" placeholder="Nombre del pedido">
                 </div>
+                <div class="form-group">
+                    <label for="pedido-correo">Correo*</label>
+                    <input type="email" class="form-control" id="pedido-correo" name="pedido-correo" placeholder="Correo*">
+                </div>
+                <div class="form-group">
+                    <label for="pedido-nombre">Nombre *</label>
+                    <input type="text" class="form-control" id="pedido-nombre" name="pedido-nombre" placeholder="Nombre *">
+                </div>
+                <div class="form-group">
+                    <label for="pedido-apellido">Apellido*</label>
+                    <input type="text" class="form-control" id="pedido-apellido" name="pedido-apellido" placeholder="Apellido*">
+                </div>
+                <div class="form-group">
+                    <label for="direccion1">Dirección 1 *</label>
+                    <input type="text" class="form-control" id="direccion1" name="direccion1" placeholder="Dirección 1 *">
+                </div>
+                <div class="form-group">
+                    <label for="direccion2">Dirección 2</label>
+                    <input type="text" class="form-control" id="direccion2" name="direccion2" placeholder="Dirección 2">
+                </div>
+                <div class="form-group">
+                    <label for="metodo-pago">Método de pago</label>
+                    <select class="form-control" id="metodo-pago" name="metodo-pago">
+                        <option value="efectivo">Pagar por efectivo</option>
+                        <option value="transferencia">Transferencia</option>
+                    </select>
+                </div>
+
+
                 <section id="do_action">
                     <div class="container">
                         <div class="row">
@@ -220,93 +214,86 @@
                                         <li>Envío: <span>Gratuito</span></li>
                                         <li>Total <span id="txt-total"><%= Math.round(total * 100.0) / 100.0%></span></li>
                                     </ul>
-                                    <a class="btn btn-default update" href="">Update</a>
-                                    <a class="btn btn-default check_out" href="" id="pagarBtn">Pagar</a>
-                                    <div id="combobox" style="display: none;">
-                                        <select class="form-control">
-                                            <option value="efectivo">Efectivo</option>
-                                            <option value="transferencia">Transferencia</option>
-                                        </select>
-                                        <button class="btn btn-primary" onclick="realizarPago()">Realizar Pago</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
+                <!-- Resto del formulario -->
+                <button type="submit" class="btn btn-primary">Guardar Pedido</button>
+            </form>
+        </div>
 
 
-            <!-- Footer Start -->
-            <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-                <div class="container py-5">
-                    <div class="row g-5">
-                        <div class="col-lg-3 col-md-6">
-                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
-                            <a class="btn btn-link" href="about.jsp">Nosotros</a>
-                            <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contáctanos</h4>
-                            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plaza Sendero - C. 300 85180, Franja
-                                Comercial 300, 85065 Cd Obregón, Son.</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210</p>
-                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>jorgvillagrana@hotmail.com </p>
-                            <div class="d-flex pt-2">
-                                <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Horarios</h4>
-                            <h5 class="text-light fw-normal">Lunes - Sábado</h5>
-                            <p>10AM - 09PM</p>
-                            <h5 class="text-light fw-normal">Domingo</h5>
-                            <p>10AM - 05PM</p>
-                        </div>  
-                        <div class="col-lg-3 col-md-6">
-                            <h4><img id="logo-footer" src="img/gorillaBoneless.png" alt="lgo"></h4>
-                        </div>                   
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">¿Quiénes somos?</h4>
+                        <a class="btn btn-link" href="about.jsp">Nosotros</a>
+                        <a class="btn btn-link" href="contact.jsp">Contáctanos</a>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="copyright">
-                        <div class="row">
-                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
-                            </div>
-                            <div class="col-md-6 text-center text-md-end">
-                                <div class="footer-menu">
-                                    <a href="index.jsp">Inicio</a>
-                                    <a href="contact.jsp">Ayuda</a>
-                                </div>
-                            </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contáctanos</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Plaza Sendero - C. 300 85180, Franja
+                            Comercial 300, 85065 Cd Obregón, Son.</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+52 644 140 0210</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>jorgvillagrana@hotmail.com </p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/gorillazbonelessoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Horarios</h4>
+                        <h5 class="text-light fw-normal">Lunes - Sábado</h5>
+                        <p>10AM - 09PM</p>
+                        <h5 class="text-light fw-normal">Domingo</h5>
+                        <p>10AM - 05PM</p>
+                    </div>  
+                    <div class="col-lg-3 col-md-6">
+                        <h4><img id="logo-footer" src="img/gorillaBoneless.png" alt="lgo"></h4>
+                    </div>                   
                 </div>
             </div>
-            <!-- Footer End -->
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.jsp">Inicio</a>
+                                <a href="contact.jsp">Ayuda</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
 
 
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-            <!-- JavaScript Libraries -->
+        <!-- JavaScript Libraries -->
 
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="lib/wow/wow.min.js"></script>
-            <script src="lib/easing/easing.min.js"></script>
-            <script src="lib/waypoints/waypoints.min.js"></script>
-            <script src="lib/counterup/counterup.min.js"></script>
-            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-            <script src="lib/tempusdominus/js/moment.min.js"></script>
-            <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-            <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-            <!-- Template Javascript -->
-            <script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
     </body>
 
 </html>

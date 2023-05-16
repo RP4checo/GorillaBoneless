@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-05-2023 a las 04:40:38
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 16-05-2023 a las 11:13:28
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,9 +28,27 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `pedidos` (
-  `id_pedido` int(11) NOT NULL,
-  `fecha` date NOT NULL
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `correo` varchar(100) DEFAULT NULL,
+  `nombre_cliente` varchar(100) DEFAULT NULL,
+  `apellido_cliente` varchar(100) DEFAULT NULL,
+  `direccion1` varchar(100) DEFAULT NULL,
+  `direccion2` varchar(100) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `total` decimal(10,2) DEFAULT NULL,
+  `productos` varchar(500) DEFAULT NULL,
+  `metodo_pago` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id`, `nombre`, `correo`, `nombre_cliente`, `apellido_cliente`, `direccion1`, `direccion2`, `fecha`, `total`, `productos`, `metodo_pago`) VALUES
+(1, 'asd', 'asdasasdd@gmail.com', 'asd', 'MORAN OROPEZA', 'AV.Hidalgo77, col.Guerrero', 'Guerrero', '2023-05-16', '110.98', 'LARRYBURGER, MONTANA\'S BURGER, Gato Insano Heroico', 'efectivo'),
+(2, 'asdasd', 'asdasd@gmail.com', 'asdasd', 'asdasd', 'asda', 'asdasd', '2023-05-16', '11.00', 'Gato Insano Heroico', 'transferencia'),
+(3, 'asdasd', 'asdasassaddd@gmail.com', 'asdasd', 'MORAN OROPEZA', 'AV.Hidalgo77, col.Guerrero', 'Guerrero', '2023-05-16', '11.00', 'Gato Insano Heroico', 'efectivo');
 
 -- --------------------------------------------------------
 
@@ -65,15 +83,17 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre`, `img_producto`, `precio`, `categoria`) VALUES
-(1, 'Coca', 'images/coca.jpg', 19.5, 0),
-(2, 'Fanta', 'images/fanta.jpg', 18.5, 0),
-(3, 'Sprite', 'images/sprite.jpg', 18.5, 0),
-(5, 'MONTANA\'S BURGER', 'img/menu-1.jpg', 49.99, 1),
-(6, 'LARRYBURGER', 'img/menu-2.jpg', 49.99, 1),
-(7, 'MR. GORILLA\'Z', 'img/menu-3.jpg', 49.99, 1),
-(8, 'MANCHEESTER', 'img/menu-4.jpg', 49.99, 1),
-(9, 'BIG BANG', 'img/menu-5.jpg', 49.99, 1),
-(10, 'CHICKER BURGER', 'img/menu-6.jpg', 49.99, 1);
+(5, 'MONTANA\'S BURGER', 'img/menu-1.jpg', 79.99, 1),
+(6, 'LARRYBURGER', 'img/menu-2.jpg', 86.99, 1),
+(7, 'MR. GORILLA\'Z', 'img/menu-3.jpg', 56.99, 1),
+(8, 'MANCHEESTER', 'img/menu-4.jpg', 86.99, 1),
+(9, 'BIG BANG', 'img/menu-5.jpg', 99.99, 1),
+(10, 'CHICKER BURGER', 'img/menu-6.jpg', 79.99, 1),
+(17, 'Te chai en las rocas', 'img/Te chai.jpg', 56, 2),
+(18, 'Cafe en las rocas', 'img/cafe.jpg', 46, 2),
+(19, 'Gelatinas', 'img/gelatinas.jpg', 25, 3),
+(20, 'Pastel de Galleta', 'img/PastelGalleta.jpg', 34, 3),
+(21, 'Flan', 'img/flan.jpg', 28, 3);
 
 -- --------------------------------------------------------
 
@@ -109,7 +129,7 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `pass`) VALUES
 -- Indices de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  ADD PRIMARY KEY (`id_pedido`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `pedido_producto`
@@ -139,19 +159,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido_producto`
 --
 ALTER TABLE `pedido_producto`
-  MODIFY `id_pedido_producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -167,7 +187,7 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `pedido_producto`
 --
 ALTER TABLE `pedido_producto`
-  ADD CONSTRAINT `pedidos_id_pedido_pedido_producto` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `pedidos_id_pedido_pedido_producto` FOREIGN KEY (`id_pedido`) REFERENCES `pedidosssss` (`id_pedido`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `productos_id_producto_pedido_producto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
