@@ -100,9 +100,6 @@
                     <input type="password" class="form-control" name="pass" placeholder="Contraseña" required="required">
                 </div>
                 <div class="form-group">
-                    <label class="form-check-label"><input type="checkbox"> Recuérdame</label>
-                </div>
-                <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Iniciar Sesión</button>
                 </div>
             </form>

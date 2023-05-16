@@ -73,7 +73,7 @@
             <!-- Navbar & Hero Start -->
             <div class="container-xxl position-relative p-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                    <a href="" class="navbar-brand p-0">
+                    <a href="index.jsp" class="navbar-brand p-0">
                         <h1 id="logo" class="text-primary m-0"><i class="logo"><img src="img/gorillaBoneless.png"
                                                                                     alt="Logo"></i>Gorillaz Boneless</h1>
                     </a>
@@ -121,7 +121,7 @@
                                     <span>Precio $<%=producto.getPrecio()%></span><br>
                                     <label>Cantidad:</label>
                                     <input type="hidden" value="<%=producto.getId()%>" name="idproducto">
-                                    <input type="text" value="1" id="txt-cantidad" name="cantidad"/><br>
+                                    <input type="number" value="1" id="txt-cantidad" name="cantidad"/><br>
                                     <button type="submit" class="btn btn-fefault cart">
                                         <i class="fa fa-shopping-cart"></i>
                                         Añadir al carrito

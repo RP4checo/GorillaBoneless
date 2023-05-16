@@ -5,6 +5,7 @@
 package Controlador;
 
 import Controlador.Conexion;
+import Modelo.Articulo;
 import Modelo.ModeloProducto;
 import Modelo.Producto;
 import java.sql.Connection;
@@ -14,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpSession;
 
 public class ControladorProducto {
 
@@ -189,6 +191,19 @@ public class ControladorProducto {
         }
 
         return htmlCode.toString();
+    }
+
+    public void eliminarProductoCarrito(HttpSession sesion, int idProducto) {
+        ArrayList<Articulo> articulos = (ArrayList<Articulo>) sesion.getAttribute("carrito");
+        if (articulos != null) {
+            for (int i = 0; i < articulos.size(); i++) {
+                if (articulos.get(i).getIdProducto() == idProducto) {
+                    articulos.remove(i);
+                    break;
+                }
+            }
+            sesion.setAttribute("carrito", articulos);
+        }
     }
 
 }

@@ -32,6 +32,10 @@
         <servlet-name>GuardarPedidoServlet</servlet-name>
         <servlet-class>servlet.GuardarPedidoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EliminarProductoServlet</servlet-name>
+        <servlet-class>servlet.EliminarProductoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>GuardarPedidoServlet</servlet-name>
         <url-pattern>/GuardarPedidoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarProductoServlet</servlet-name>
+        <url-pattern>/EliminarProductoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

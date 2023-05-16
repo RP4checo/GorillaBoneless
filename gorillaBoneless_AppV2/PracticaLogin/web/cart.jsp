@@ -67,7 +67,7 @@
             <!-- Navbar & Hero Start -->
             <div class="container-xxl position-relative p-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                    <a href="" class="navbar-brand p-0">
+                    <a href="index.jsp" class="navbar-brand p-0">
                         <h1 id="logo" class="text-primary m-0"><i class="logo"><img src="img/gorillaBoneless.png"
                                                                                     alt="Logo"></i>Gorillaz Boneless</h1>
                     </a>
@@ -76,10 +76,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0 pe-4">
-                            <a href="#" class="nav-item nav-link"><span class="material-symbols-outlined">
-                                    settings
-                                </span>
-                            </a>
                             <a href="cart.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
@@ -299,6 +295,18 @@
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.cart_quantity_delete').on('click', function (e) {
+                    e.preventDefault();
+                    var idProducto = $(this).siblings('.idarticulo').data('id');
+                    $.post('eliminarProducto', {idProducto: idProducto}, function () {
+                        location.reload();
+                    });
+                });
+            });
+        </script>
     </body>
 
 </html>

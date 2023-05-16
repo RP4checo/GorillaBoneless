@@ -69,7 +69,7 @@
             <!-- Navbar & Hero Start -->
             <div class="container-xxl position-relative p-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                    <a href="" class="navbar-brand p-0">
+                   <a href="index.jsp" class="navbar-brand p-0">
                         <h1 id="logo" class="text-primary m-0"><i class="logo"><img src="img/gorillaBoneless.png"
                                                                                     alt="Logo"></i>Gorillaz Boneless</h1>
                     </a>
@@ -78,10 +78,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0 pe-4">
-                            <a href="crud.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
-                                    settings
-                                </span>
-                            </a>
                             <a href="cart.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>

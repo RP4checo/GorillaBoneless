@@ -6,6 +6,13 @@
 <%
     ControladorProducto cp = new ControladorProducto();
 %>
+<%
+    HttpSession objSesion = request.getSession(false);
+    String usuario = (String) objSesion.getAttribute("usuario");
+    if (usuario.equals("")) {
+        response.sendRedirect("index.jsp");
+    }
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,12 +91,12 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0 pe-4">
-                            <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            <a href="crud.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     settings
                                 </span></a>
-                            <a href="cart.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
-                                    shopping_cart
-                                </span>
+                                                        <div class="nav-item nav-link">
+                                <% out.println(usuario);%> 
+                            </div>
                         </div>
                         <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                     </div>
@@ -204,18 +211,12 @@
                                     &copy; <a class="border-bottom" href="https://www.facebook.com/profile.php?id=100040057070626" target="_blank">Gorillaz Boneless</a>, Todos los derechos reservados.
                                 </div>
                                 <div class="col-md-6 text-center text-md-end">
-                                    <div class="footer-menu">
-                                        <a href="index.jsp">Inicio</a>
-                                        <a href="contact.jsp">Ayuda</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Footer End -->
-
-
 
                 <!-- Back to Top -->
                 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
