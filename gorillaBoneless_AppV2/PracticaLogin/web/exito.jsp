@@ -82,7 +82,7 @@
                                     settings
                                 </span>
                             </a>
-                            <a href="checkout.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            <a href="carrito.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
                             </a>
@@ -90,14 +90,14 @@
                                 <% out.println(usuario);%> 
                             </div>
                         </div>
-                        <a href="login.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
+                        <a href="carrito.jsp" class="btn btn-primary py-2 px-4">Cerrar Sesión</a>
                     </div>
                 </nav>
 
                 <div class="container-xxl py-5 bg-dark hero-header mb-5">
                     <div class="container text-center my-5 pt-5 pb-4">
                         <h1 class="display-3 text-white mb-3 animated slideInDown">Tu orden ha sido enviada</h1>
-                        <h4 class="display-9 text-white mb-3 animated slideInRight">Recogela o cotactanos para mas informacion</h4>  
+                        <h4 class="display-9 text-white mb-3 animated slideInRight">Recógela o contáctanos para más información</h4>  
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
             <p><strong>Apellido del cliente:</strong> <%= pedido.getApellidoCliente()%></p>
             <p><strong>Dirección 1:</strong> <%= pedido.getDireccion1()%></p>
             <p><strong>Dirección 2:</strong> <%= pedido.getDireccion2()%></p>
-            <p><strong>Total:</strong> <%= pedido.getTotal()%></p>
+            <p><strong>Total:</strong> <%= String.format("%.2f", pedido.getTotal())%></p>
             <p><strong>Productos:</strong> <%= pedido.obtenerNombresProductos()%></p>
             <p><strong>Método de pago:</strong> <%= pedido.getMetodoPago()%></p>
 

@@ -48,7 +48,6 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
     </head>
 
     <body>
@@ -81,7 +80,7 @@
                                     settings
                                 </span>
                             </a>
-                            <a href="checkout.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
+                            <a href="cart.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     shopping_cart
                                 </span>
                             </a>
@@ -102,12 +101,12 @@
             </div>
             <!-- Navbar & Hero End -->
 
+            <!-- Carrito -->
             <section id="cart_items">
                 <div class="container">
                     <div class="breadcrumbs">
                         <ol class="breadcrumb">
-                            <li><a href="index.jsp">Inicio</a></li>
-                            <li class="active">--Carrito</li>
+                            <a href="carrito.jsp" class="btn btn-primary py-2 px-4">Seguir comprando</a>
                         </ol>
                     </div>
                     <div class="table-responsive cart_info" id="cart-container">
@@ -138,16 +137,14 @@
                                     </td>
                                     <td class="cart_description">
                                         <h4><a href=""><%= producto.getNombre()%></a></h4>
-                                        <p>Web ID: <%= producto.getId()%></p>
+                                        <p>ID: <%= producto.getId()%></p>
                                     </td>
                                     <td class="cart_price">
                                         <p>$<%= producto.getPrecio()%></p>
                                     </td>
                                     <td class="cart_quantity">
                                         <div class="cart_quantity_button">
-                                            <a class="cart_quantity_up" href=""> + </a>
-                                            <input class="cart_quantity_input" type="text" name="quantity" value="<%= a.getCantidad()%>" autocomplete="off" size="2">
-                                            <a class="cart_quantity_down" href=""> - </a>
+                                            <input class="cart_quantity_input" type="text" name="quantity" value="<%= a.getCantidad()%>" autocomplete="off" size="2" readonly>
                                         </div>
                                     </td>
                                     <td class="cart_total">
@@ -166,35 +163,41 @@
                         <h4>No hay Articulos en el carro</h4>
                         <%}%>
                     </div> 
-                    <a href="javascript:window.history.go(-2);">Seguir Comprando</a>
                 </div>
             </section>
 
             <form action="GuardarPedidoServlet" method="post">
+                <br>
                 <div class="form-group">
-                    <label for="pedido-nombre">Nombre del pedido</label>
-                    <input type="text" class="form-control" id="pedido-nombre" name="pedido-nombre" placeholder="Nombre del pedido">
+                    <label for="pedido-nombre">Nombre del pedido *</label>
+                    <input type="text" class="form-control" id="pedido-nombre" name="pedido-nombre" placeholder="Nombre del pedido *" required="required">
                 </div>
+                <br>
                 <div class="form-group">
-                    <label for="pedido-correo">Correo*</label>
-                    <input type="email" class="form-control" id="pedido-correo" name="pedido-correo" placeholder="Correo*">
+                    <label for="pedido-correo">Correo *</label>
+                    <input type="email" class="form-control" id="pedido-correo" name="pedido-correo" placeholder="Correo *" required="required">
                 </div>
+                <br>
                 <div class="form-group">
                     <label for="pedido-nombre">Nombre *</label>
-                    <input type="text" class="form-control" id="pedido-nombre" name="pedido-nombre" placeholder="Nombre *">
+                    <input type="text" class="form-control" id="pedido-nombre" name="pedido-nombre" placeholder="Nombre *" required="required">
                 </div>
+                <br>
                 <div class="form-group">
-                    <label for="pedido-apellido">Apellido*</label>
-                    <input type="text" class="form-control" id="pedido-apellido" name="pedido-apellido" placeholder="Apellido*">
+                    <label for="pedido-apellido">Apellido *</label>
+                    <input type="text" class="form-control" id="pedido-apellido" name="pedido-apellido" placeholder="Apellido *" required="required">
                 </div>
+                <br>
                 <div class="form-group">
                     <label for="direccion1">Dirección 1 *</label>
-                    <input type="text" class="form-control" id="direccion1" name="direccion1" placeholder="Dirección 1 *">
+                    <input type="text" class="form-control" id="direccion1" name="direccion1" placeholder="Dirección 1 *" required="required">
                 </div>
+                <br>
                 <div class="form-group">
-                    <label for="direccion2">Dirección 2</label>
-                    <input type="text" class="form-control" id="direccion2" name="direccion2" placeholder="Dirección 2">
+                    <label for="direccion2">Dirección (Referencias)</label>
+                    <input type="text" class="form-control" id="direccion2" name="direccion2" placeholder="Dirección (Referencias)">
                 </div>
+                <br>
                 <div class="form-group">
                     <label for="metodo-pago">Método de pago</label>
                     <select class="form-control" id="metodo-pago" name="metodo-pago">
@@ -202,27 +205,29 @@
                         <option value="transferencia">Transferencia</option>
                     </select>
                 </div>
+                <br>
 
-
+                <!-- Pago -->
                 <section id="do_action">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="total_area">
                                     <ul>
-                                        <li>Total en productos <span id="txt-subtotal">$<%= Math.round(total * 100.0) / 100.0%></span></li>
+                                        <li>Subtotal: <span id="txt-subtotal">$<%= Math.round(total * 100) / 100%></span></li>
                                         <li>Envío: <span>Gratuito</span></li>
-                                        <li>Total <span id="txt-total"><%= Math.round(total * 100.0) / 100.0%></span></li>
+                                        <li>Total a pagar: <span id="txt-total" class="total-amount">$<%= Math.round(total * 100) / 100%></span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- Resto del formulario -->
                 <button type="submit" class="btn btn-primary">Guardar Pedido</button>
+                <br>
             </form>
         </div>
+        <!-- Carrito End -->
 
 
         <!-- Footer Start -->

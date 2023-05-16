@@ -114,7 +114,7 @@
                         <div class="view-product">
                             <img src="<%=producto.getImg_producto()%>" alt="" width="230" height="230"/>
                             <h2><%=producto.getNombre()%></h2>
-                            <h4>Web ID: <%=producto.getId()%></h4>
+                            <h4>ID: <%=producto.getId()%></h4>
                             <!--<img src="images/rating.jpg" alt="" width="250" height="100"/>-->
                             <form action="agregarproducto" method="post">
                                 <span>
