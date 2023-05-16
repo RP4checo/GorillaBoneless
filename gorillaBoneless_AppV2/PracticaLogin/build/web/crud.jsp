@@ -100,6 +100,7 @@
                 </div>
             </div>
             <!-- Navbar & Hero End -->
+            
 
             <!-- Crud start -->
             <div class="container-lg">
@@ -232,6 +233,7 @@
 
             <!-- Template Javascript -->
             <script src="js/main.js"></script>
+
     </body>
 
 </html>
