@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2023 a las 11:13:28
+-- Tiempo de generación: 16-05-2023 a las 23:38:21
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -53,20 +53,6 @@ INSERT INTO `pedidos` (`id`, `nombre`, `correo`, `nombre_cliente`, `apellido_cli
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pedido_producto`
---
-
-CREATE TABLE `pedido_producto` (
-  `id_pedido` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
-  `precioProducto` float NOT NULL,
-  `cantidadProducto` int(11) NOT NULL,
-  `id_pedido_producto` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `productos`
 --
 
@@ -104,22 +90,24 @@ INSERT INTO `productos` (`id_producto`, `nombre`, `img_producto`, `precio`, `cat
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
   `nombre` varchar(40) NOT NULL,
-  `pass` varchar(20) NOT NULL
+  `pass` varchar(20) NOT NULL,
+  `categoria` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `pass`) VALUES
-(1, 'aldo', '123'),
-(2, 'miguel', '123'),
-(3, 'Roberto', '123'),
-(4, 'kike', 'nope'),
-(5, 'meli', '123'),
-(6, 'jica', '123'),
-(7, 'bebe', '123'),
-(8, 'hector', '123');
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `pass`, `categoria`) VALUES
+(1, 'aldo', '123', 1),
+(2, 'miguel', '123', 0),
+(3, 'Roberto', '123', 0),
+(4, 'kike', 'nope', 0),
+(5, 'meli', '123', 0),
+(6, 'jica', '123', 0),
+(7, 'bebe', '123', 0),
+(8, 'hector', '123', 0),
+(9, 'HectorGra', '123', 1);
 
 --
 -- Índices para tablas volcadas
@@ -130,14 +118,6 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `pass`) VALUES
 --
 ALTER TABLE `pedidos`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `pedido_producto`
---
-ALTER TABLE `pedido_producto`
-  ADD PRIMARY KEY (`id_pedido_producto`),
-  ADD KEY `pedidos_id_pedido_pedido_producto` (`id_pedido`),
-  ADD KEY `productos_id_producto_pedido_producto` (`id_producto`);
 
 --
 -- Indices de la tabla `productos`
@@ -162,12 +142,6 @@ ALTER TABLE `pedidos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `pedido_producto`
---
-ALTER TABLE `pedido_producto`
-  MODIFY `id_pedido_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
@@ -177,18 +151,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `pedido_producto`
---
-ALTER TABLE `pedido_producto`
-  ADD CONSTRAINT `pedidos_id_pedido_pedido_producto` FOREIGN KEY (`id_pedido`) REFERENCES `pedidosssss` (`id_pedido`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `productos_id_producto_pedido_producto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

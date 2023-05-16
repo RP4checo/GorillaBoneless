@@ -17,10 +17,18 @@ public class InicioSesion1 extends HttpServlet {
         String clave = request.getParameter("pass");
 
         Consultas sql = new Consultas();
-        if (sql.aunteticacion(usuario, clave)) {
+        int categoria = sql.autenticacion(usuario, clave);
+        if (categoria != -1) {
             HttpSession objSesion = request.getSession(true);
             objSesion.setAttribute("usuario", usuario);
-            response.sendRedirect("carrito.jsp");
+            objSesion.setAttribute("categoria", categoria);
+            if (categoria == 1) {
+                response.sendRedirect("carrito.jsp");
+            } else if (categoria == 0) {
+                response.sendRedirect("crud.jsp");
+            } else {
+                response.sendRedirect("contact.jsp");
+            }
         } else {
             response.sendRedirect("contact.jsp");
         }

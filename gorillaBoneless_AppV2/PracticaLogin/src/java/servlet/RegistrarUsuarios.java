@@ -30,6 +30,7 @@ public class RegistrarUsuarios extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -41,7 +42,7 @@ public class RegistrarUsuarios extends HttpServlet {
         if(sql.registrar(usuario, clave)){
             response.sendRedirect("login.jsp");
         }else {
-            response.sendRedirect("registro.jsp");
+            response.sendRedirect("register.jsp");
         }
     }
 

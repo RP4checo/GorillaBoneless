@@ -8,12 +8,12 @@ import java.sql.ResultSet;
  * @author Omar López Chávez
  */
 public class Consultas extends Conexion {
-    
-    public Consultas(){
-        
+
+    public Consultas() {
+
     }
-    
-public boolean aunteticacion(String usuario, String clave) {
+
+    public int autenticacion(String usuario, String clave) {
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
@@ -25,7 +25,7 @@ public boolean aunteticacion(String usuario, String clave) {
             rs = pst.executeQuery();
 
             if (rs.next()) {
-                return true;
+                return rs.getInt("categoria");
             }
         } catch (Exception e) {
             System.out.println("Error: " + e);
@@ -44,52 +44,59 @@ public boolean aunteticacion(String usuario, String clave) {
                 System.out.println("Error al cerrar recursos: " + e);
             }
         }
-        return false;
+        return -1;
     }
-    
-    public boolean registrar(String usuario, String clave){
+
+    public boolean registrar(String usuario, String clave) {
         PreparedStatement pst = null;
         try {
-            String consulta = "insert into usuarios (nombre, pass) values(?,?)";
+            String consulta = "insert into usuarios (nombre, pass, categoria) values(?,?,1)";
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, usuario);
             pst.setString(2, clave);
-            if(pst.executeUpdate() == 1){
+            if (pst.executeUpdate() == 1) {
                 return true;
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Error en " + e);
-        }finally {
+        } finally {
             try {
-                if(getConexion() != null) getConexion().close();
-                if(pst != null) pst.close();
-            }catch(Exception e) {
+                if (getConexion() != null) {
+                    getConexion().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+            } catch (Exception e) {
                 System.out.println("Error en " + e);
             }
         }
         return false;
     }
-    
-    public boolean obtenerProductos(){
+
+    public boolean obtenerProductos() {
         PreparedStatement pst = null;
         try {
             String consulta = "SELECT * FROM productos";
             pst = getConexion().prepareStatement(consulta);
-            if(pst.executeUpdate() == 1){
+            if (pst.executeUpdate() == 1) {
                 return true;
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Error en " + e);
-        }finally {
+        } finally {
             try {
-                if(getConexion() != null) getConexion().close();
-                if(pst != null) pst.close();
-            }catch(Exception e) {
+                if (getConexion() != null) {
+                    getConexion().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+            } catch (Exception e) {
                 System.out.println("Error en " + e);
             }
         }
         return false;
     }
-    
-    
+
 }
