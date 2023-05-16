@@ -27,10 +27,12 @@ public class InicioSesion1 extends HttpServlet {
             } else if (categoria == 0) {
                 response.sendRedirect("crud.jsp");
             } else {
-                response.sendRedirect("contact.jsp");
+                response.setContentType("text/html;charset=UTF-8");
+                response.getWriter().println("<h1>Usuario no encontrado</h1>");
             }
         } else {
-            response.sendRedirect("contact.jsp");
+            response.setContentType("text/html;charset=UTF-8");
+            response.getWriter().println("<h1>Usuario no encontrado</h1>");
         }
     }
 
