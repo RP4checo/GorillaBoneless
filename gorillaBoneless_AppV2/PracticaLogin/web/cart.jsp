@@ -219,7 +219,7 @@
                         </div>
                     </div>
                 </section>
-                <button type="submit" class="btn btn-primary">Guardar Pedido</button>
+                <button type="submit" class="btn btn-primary">Comprar</button>
                 <br>
             </form>
         </div>

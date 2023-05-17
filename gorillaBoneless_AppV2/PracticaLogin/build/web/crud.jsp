@@ -1,3 +1,4 @@
+<%@page import="Controlador.Consultas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Controlador.ControladorProducto" %>
 <%@ page import="java.util.ArrayList" %>
@@ -9,8 +10,22 @@
 <%
     HttpSession objSesion = request.getSession(false);
     String usuario = (String) objSesion.getAttribute("usuario");
-    if (usuario.equals("")) {
+    String clave = "123";
+    Consultas sql = new Consultas();
+    int comp = 1;
+    int categoria = sql.autenticacion(usuario, clave);
+    objSesion.setAttribute("categoria", categoria);
+    if (usuario == null || usuario.equals("")) {
         response.sendRedirect("index.jsp");
+    } else {
+        System.out.println(clave);
+        if (categoria == 1) {
+            System.out.println("no pasó");
+            response.sendRedirect("carrito.jsp");
+        } else if (categoria == 1) {
+            System.out.println("si paso");
+            System.out.println(categoria);
+        }
     }
 %>
 <!DOCTYPE html>
@@ -94,7 +109,7 @@
                             <a href="crud.jsp" class="nav-item nav-link"><span class="material-symbols-outlined">
                                     settings
                                 </span></a>
-                                                        <div class="nav-item nav-link">
+                            <div class="nav-item nav-link">
                                 <% out.println(usuario);%> 
                             </div>
                         </div>
